@@ -13,3 +13,6 @@ console.log(Data.bucketArray);
 //console.log(Data.get("Carla"));
 
 //console.log(Data.has("Carlos"));
+
+//console.log(Data.remove("Carla"));
+//console.log(Data.bucketArray[0]);

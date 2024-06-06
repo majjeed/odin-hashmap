@@ -48,7 +48,15 @@ class Hashmap {
     return this.bucketArray[hashCode].contains(key);
   }
 
-  remove(key) {}
+  remove(key) {
+    let hashCode = this.getHashCode(key);
+    if (this.has(key)) {
+      let index = this.bucketArray[hashCode].find(key);
+      this.bucketArray[hashCode].removeAt(index);
+      return true;
+    }
+    return false;
+  }
 
   length() {}
 

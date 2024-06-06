@@ -29,3 +29,7 @@ Data.set("Carlos", "current Value 1");
 Data.set("Leno", "pc");
 console.log(Data);
 */
+
+//console.log(Data.keys());
+
+//console.log(Data.values());

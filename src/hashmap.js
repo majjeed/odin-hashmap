@@ -76,9 +76,37 @@ class Hashmap {
     });
   }
 
-  keys() {}
+  keys() {
+    let keysArr = [];
 
-  values() {}
+    this.bucketArray.forEach((bucket) => {
+      if (bucket.head !== null) {
+        let currNode = bucket.head;
+        while (currNode !== null) {
+          keysArr.push(currNode.value.key);
+          currNode = currNode.nextNode;
+        }
+      }
+    });
+
+    return keysArr;
+  }
+
+  values() {
+    let valuesArr = [];
+
+    this.bucketArray.forEach((bucket) => {
+      if (bucket.head !== null) {
+        let currNode = bucket.head;
+        while (currNode !== null) {
+          valuesArr.push(currNode.value.value);
+          currNode = currNode.nextNode;
+        }
+      }
+    });
+
+    return valuesArr;
+  }
 
   entries() {}
 }

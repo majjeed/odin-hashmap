@@ -33,3 +33,5 @@ console.log(Data);
 //console.log(Data.keys());
 
 //console.log(Data.values());
+
+console.log(Data.entries());

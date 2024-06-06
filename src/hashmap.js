@@ -108,7 +108,21 @@ class Hashmap {
     return valuesArr;
   }
 
-  entries() {}
+  entries() {
+    let arr = [];
+
+    this.bucketArray.forEach((bucket) => {
+      if (bucket.head !== null) {
+        let currNode = bucket.head;
+        while (currNode !== null) {
+          arr.push([currNode.value.key, currNode.value.value]);
+          currNode = currNode.nextNode;
+        }
+      }
+    });
+
+    return arr;
+  }
 }
 
 function hash(key) {

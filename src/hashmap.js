@@ -44,8 +44,8 @@ class Hashmap {
   }
 
   has(key) {
-    let hashCode = hash(key) & this.buckets;
-    return this.bucketArray[hashCode].key === key;
+    let hashCode = this.getHashCode(key);
+    return this.bucketArray[hashCode].contains(key);
   }
 
   remove(key) {}

@@ -24,7 +24,6 @@ class Hashmap {
     //if the bucket is not empty and already contains key
     else if (this.bucketArray[hashCode].contains(key)) {
       let index = this.bucketArray[hashCode].find(key);
-      console.log("the index is : " + index);
       this.bucketArray[hashCode].insertAt({ key, value }, index);
       this.bucketArray[hashCode].removeAt(index + 1);
     }
@@ -66,7 +65,16 @@ class Hashmap {
     return length;
   }
 
-  clear() {}
+  clear() {
+    //lazy way redeclare bucketArray
+    //okay way redeclare linked lists in bucketArray
+    //better way set the head and tail of each linked list to null in bucketArray
+    this.bucketArray.forEach((bucket) => {
+      bucket.head = null;
+      bucket.tail = null;
+      bucket.length = 0;
+    });
+  }
 
   keys() {}
 

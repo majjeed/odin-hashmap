@@ -18,3 +18,14 @@ console.log(Data.bucketArray);
 //console.log(Data.bucketArray[0]);
 
 //console.log(Data.length());
+
+//Testing clear()
+/*
+Data.clear();
+console.log(Data.bucketArray);
+
+Data.set("Carla", "test");
+Data.set("Carlos", "current Value 1");
+Data.set("Leno", "pc");
+console.log(Data);
+*/

@@ -16,3 +16,5 @@ console.log(Data.bucketArray);
 
 //console.log(Data.remove("Carla"));
 //console.log(Data.bucketArray[0]);
+
+//console.log(Data.length());

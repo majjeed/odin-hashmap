@@ -58,7 +58,13 @@ class Hashmap {
     return false;
   }
 
-  length() {}
+  length() {
+    let length = 0;
+    this.bucketArray.forEach((bucket) => {
+      length += bucket.size();
+    });
+    return length;
+  }
 
   clear() {}
 
